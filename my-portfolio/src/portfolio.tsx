@@ -75,7 +75,7 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home') 
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ["All", "Data Analysis", "AI Projects"];
+  const categories = ["All", "Data Analysis", "Machine Learning", "AI Projects", "Technical Writing"];
   const projects = [
     {
       title: "Machine  Sales Predictor",
@@ -186,76 +186,32 @@ const Portfolio = () => {
 
   const filteredProjects = selectedCategory === "All" ? projects : projects.filter(project => project.category === selectedCategory);
 
-
-  // const projects = [
-  //   {
-  //     title: "Machine Learning Sales Predictor",
-  //     description: "Developed a predictive model using advanced machine learning techniques to forecast sales trends.",
-  //     technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
-  //     githubLink: "https://github.com/yourusername/sales-predictor",
-  //     liveLink: null
-  //   },
-  //   {
-  //     title: "COVID-19 Data Analysis Dashboard",
-  //     description: "Interactive dashboard visualizing global COVID-19 trends and statistical insights.",
-  //     technologies: ["R", "Shiny", "ggplot2", "Plotly"],
-  //     githubLink: "https://github.com/yourusername/covid-dashboard",
-  //     liveLink: "https://your-covid-dashboard.com"
-  //   },
-  //   {
-  //     title: "Machine Learning Sales Predictor",
-  //     description: "Developed a predictive model using advanced machine learning techniques to forecast sales trends.",
-  //     technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
-  //     githubLink: "https://github.com/yourusername/sales-predictor",
-  //     liveLink: null
-  //   },
-  //   {
-  //     title: "COVID-19 Data Analysis Dashboard",
-  //     description: "Interactive dashboard visualizing global COVID-19 trends and statistical insights.",
-  //     technologies: ["R", "Shiny", "ggplot2", "Plotly"],
-  //     githubLink: "https://github.com/yourusername/covid-dashboard",
-  //     liveLink: "https://your-covid-dashboard.com"
-  //   },
-  //   {
-  //     title: "Machine Learning Sales Predictor",
-  //     description: "Developed a predictive model using advanced machine learning techniques to forecast sales trends.",
-  //     technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
-  //     githubLink: "https://github.com/yourusername/sales-predictor",
-  //     liveLink: null
-  //   },
-  //   {
-  //     title: "COVID-19 Data Analysis Dashboard",
-  //     description: "Interactive dashboard visualizing global COVID-19 trends and statistical insights.",
-  //     technologies: ["R", "Shiny", "ggplot2", "Plotly"],
-  //     githubLink: "https://github.com/yourusername/covid-dashboard",
-  //     liveLink: "https://your-covid-dashboard.com"
-  //   },
-  //   {
-  //     title: "Machine Learning Sales Predictor",
-  //     description: "Developed a predictive model using advanced machine learning techniques to forecast sales trends.",
-  //     technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
-  //     githubLink: "https://github.com/yourusername/sales-predictor",
-  //     liveLink: null
-  //   },
-  //   {
-  //     title: "COVID-19 Data Analysis Dashboard",
-  //     description: "Interactive dashboard visualizing global COVID-19 trends and statistical insights.",
-  //     technologies: ["R", "Shiny", "ggplot2", "Plotly"],
-  //     githubLink: "https://github.com/yourusername/covid-dashboard",
-  //     liveLink: "https://your-covid-dashboard.com"
-  //   }
-  // ];
-
   const renderSection = () => {
     switch(activeSection) {
       case 'home':
         return (
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4 text-gray-200 animate-fade-in">
-              Data Science Portfolio
+          <div className="text-left">
+            <h1 className="text-4xl text-left px-8 font-bold mb-4 text-gray-200 animate-fade-in">
+              Hi! I'm Damilare Keshinro
             </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto animate-fade-in delay-100">
-              Transforming complex data into actionable insights through advanced analytics and machine learning.
+            <p className="text-xl text-left text-gray-400 px-12 max-w-8xl animate-fade-in delay-100 overflow-y-auto scrollbar-hide">
+
+                  ---
+
+                  ### **Damilare Keshinro – Data Analyst | Machine Learning Enthusiast | Clinical Research Advocate**  
+
+                  I am a results-driven **data analyst** with a strong foundation in **machine learning, pattern recognition, and data-driven decision-making**. With expertise in **Python, SQL, and Power BI**, I thrive on transforming raw data into actionable insights, helping organizations make informed choices.  
+
+                  Beyond data analytics, I am deeply invested in the intersection of **technology and healthcare**, actively contributing to clinical research initiatives aimed at improving health outcomes in Africa. As part of my commitment to fostering growth in the industry, I have played key roles in organizing **developer bootcamps, clinical trial training programs, and data science mentorship sessions**—ensuring the next generation of analysts and researchers are well-equipped for impact.  
+
+                  My work extends into **AI applications**, particularly in **speech recognition** and predictive analytics, where I am building models to recognize diverse Nigerian accents and forecast product trends based on customer behavior and seasonality. Whether I’m leading data-driven discussions, speaking at industry events, or building digital solutions, my mission remains the same: **to harness the power of data to solve real-world problems and drive innovation**.  
+
+                  🔹 Open to collaborations in **data science, AI-driven healthcare, and clinical research**  
+                  🔹 Passionate about **education, mentorship, and making data insights accessible to all**  
+
+                  Let’s connect and build something meaningful! 🚀  
+
+                Transforming complex data into actionable insights through advanced analytics and machine learning.
             </p>
           </div>
         );
@@ -400,10 +356,10 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900 text-gray-100">
+    <div className="min-h-screen flex flex-col bg-gray-900 text-gray-100 scrollbar-none">
       <nav className="bg-gray-800 text-gray-200 shadow-md fixed top-0 left-0 right-0 z-10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-blue-400">Your Name</div>
+          <div className="text-2xl font-bold text-blue-400">Damilare Keshinro</div>
           <div className="flex space-x-6">
             {[
               { section: 'home', icon: User, label: 'Home' },
@@ -428,7 +384,7 @@ const Portfolio = () => {
         </div>
       </nav>
 
-      <main className="container mx-auto px-4 pt-24 pb-12 flex-1">
+      <main className="container mx-auto px-4 pt-24 pb-12 flex-1 scrollbar-hide">
         {renderSection()}
       </main>
 
